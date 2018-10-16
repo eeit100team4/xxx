@@ -1,0 +1,692 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>歡樂點--科技家電</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="./Aslick/slick.css">
+    <link rel="stylesheet" href="./Aslick/slick-theme.css">
+    <link rel="stylesheet" href="./Acss/font-awesome.min.css">
+    <link rel="stylesheet" href="./Acss/Abase.css">
+    <script src="./Ajs/jquery-3.3.1.min.js"></script>
+    <script src="./Aslick/slick.min.js"></script>
+    <script src="./Ajs/Abase.js"></script>
+</head>
+<body>
+    <div class="wrapper">
+        <header class="header">
+            <div class="container">
+                <div class="nav-btn"><span></span></div>
+                <!-- <div class="nav-logo"><a href="/" title=中華電信歡樂點商城><img src="./Aimages/logo.jpg"></a></div> -->
+                <div class="nav-logo"><a href="/" title=中華電信歡樂點商城><img src="https://mall.cheerspoint.com.tw/adhtml/index/images/CP_HEADER_A1.jpg"></a></div>
+                <div class="nav-action">
+                    <!-- 登入頁才有的按鈕 - 員工認證 -->
+                    <!-- <div class="certified">
+                        <a href=""><i class="fa fa-user"></i>員工認證</a>
+                    </div> -->
+                    <!-- end: 登入頁才有的按鈕 - 員工認證 -->
+                    <!-- 登入後才有的按鈕 - 搜尋 / 購物車 -->
+                    <div class="search">
+                        <span class="search__icon"><i class="fa fa-search"></i></span>
+                        <div class="search__content">
+                            <input type="text">
+                            <a href="/#!/search" class="btn orange">搜尋</a>
+                        </div>
+                    </div>
+                    <div class="cart">
+                        <a href="/#!/buy1">
+                            <!-- <span class="cart__num">2</span> -->
+                            <i class="fa fa-shopping-cart"></i>
+                        </a>
+                    </div>
+                    <!-- end: 登入後才有的按鈕 - 搜尋 / 購物車 -->
+                    <div class="user">
+                        <a href="">
+                            <i class="fa fa-user"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-menu">
+                <div class="menu__block">
+                    <ul class="member">
+                        <li><a href=""><i class="fa fa-user"></i>會員中心|訂單查詢</a></li>
+                        <li><a href=""><i class="fa fa-sign-out"></i>登出</a></li>
+                    </ul>
+                </div>
+                <div class="menu__block">
+                    <div class="points">
+                        <p>親愛的<span class="username">使用者</span>，您有：</p>
+                        <ul class="points__content">
+                            <li><span>紅利</span><span>0點</span></li>
+                            <li><span>合計</span><span>0點</span></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="menu__block">
+                    <ul class="links">                       
+                        <li><a href="https://member.cht.com.tw/CHTRegi/member_reg_select.jsp"><img src="./Aimages/fbanner_icon1.png">新手上路</a></li>
+                        <li><a href="https://mall.cheerspoint.com.tw/ChtMall/service.do"><img src="./Aimages/fbanner_icon2.png">客服中心</a></li>
+                        <li><a href="http://mall.cheerspoint.com.tw/service_cheers07.shtml"><img src="./Aimages/fbanner_icon3.png">售後服務</a></li>
+                        <li><a href="http://mall.cheerspoint.com.tw/service_cheers09.shtml"><img src="./Aimages/fbanner_icon4.png">會員權益</a></li>
+                    </ul>
+                </div>
+                <!-- 各分館的特價區 -->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">VIP尊榮獨享價</a>
+                        </div>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>【促】本月強檔推薦</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>【促】福利品出清</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>【促】團購力量大</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>【2018世界盃】是球迷就5折up</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>【賀】端5特殺開動 !</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>★《Landy 藍蒂》</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>★《華信》風扇端5折up</span></a></li>
+                        </ul>
+                        <ul class="menu__content__vip">
+                            <li><a href=""><span>★【ONE amadana】搶先預購中</span></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 各分館的特價區 -->
+                <!-- 在首頁時會出現的連結 -->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">回首頁/回館別主選單</a>
+                        </div>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>旗艦店</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>家電/汽百</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>3C數位</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>生活居家</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>台灣良品</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>食品/保健</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>時尚</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>休閒/票卷</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>美妝保養</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>旅遊收納</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 首頁時會出現的連結 -->
+                <!-- 在首頁時會出現的連結 次選單-->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">
+                                <i class="fa fa-angle-left"></i>家電/汽百
+                            </a>
+                        </div>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>清倉 | 福利品</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>旗艦店</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>科技家電</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>大電影音</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>汽機車百貨</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 在首頁時會出現的連結 次選單-->
+                <!-- 第一層連結 -->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">
+                                <i class="fa fa-angle-left"></i>科技家電(一層)
+                            </a>
+                        </div>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>廚房 家電</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>電扇 | 防蚊</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>清潔 | 整燙 | 燈 | 電話</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>除溼 | 清淨 | 香氛</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>美髮 | 美容 | 美齒</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>按摩 | 舒壓 | 足浴</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>咖啡機 | 咖啡配件</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>精選 品牌</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>樂器 | 電子琴</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>3M生活館</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 第一層連結 -->
+                <!-- 第二層連結 -->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">
+                                <i class="fa fa-angle-left"></i>家電(二層)
+                            </a>
+                        </div>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>料理烹調</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>果汁 | 豆漿 | 生機調理</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>烤箱</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>微波爐</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>烘碗機 | 洗碗機</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>微電腦電子鍋</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>飲水家電 | 淨水器</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>料理機 | 攪拌機 | 攪拌棒</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>智慧萬用鍋</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>電鍋</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>>>機械電子鍋</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 第二層連結 -->
+                <!-- 第三層及底層連結 -->
+                <div class="menu__block">
+                    <div class="menu">
+                        <div class="menu-previous">
+                            <a href="">
+                                <i class="fa fa-angle-left"></i>果汁 | 豆漿 | 生機調理(三層及底層)
+                            </a>
+                        </div>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>★果汁機(獨享型)</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>★果汁冰沙機1500CC以下</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>★果汁冰沙機1600CC以上</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="menu__content">
+                            <li class="has-leaf">
+                                <a href="">
+                                    <span>★慢磨調理機</span>
+                                    <i class="fa fa-angle-right"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end 第三層及底層連結 -->
+            </div>
+        </header>
+        <!-- 每頁內容由此開始 -->
+        <div class="main">
+		    <!-- 各分館的簡易連結 -->
+            <div class="toplist">
+                <div class="item"><a href="">家電</div>
+				<div class="item"><a href="">數位</div>
+				<div class="item"><a href="">生活</div>
+				<div class="item"><a href="">LEHO</div>
+				<div class="item"><a href="">保健</div>
+				<div class="item"><a href="">時尚</div>
+				<div class="item"><a href="">休閒</div>
+				<div class="item"><a href="">美妝</div>
+				<div class="item"><a href="">旅遊</div>
+			</div>
+			<!-- end 各分館的簡易連結 -->
+            <div class="section__title"><h2>全館熱銷排行</h2></div>
+            <div class="pd-list">
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section__title"><h2>您可能有興趣的商品</h2></div>
+            <div class="pd-list">
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section__title"><h2>大家感興趣的商品</h2></div>
+            <div class="pd-list">
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="section__title"><h2>限時特惠商品</h2></div>
+            <div class="pd-list">
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC28561517.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">【TATUNG大同】隨行杯果汁機 TJC-P250B</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$809</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+                <div class="item">
+                    <a href="" title="圖名稱">
+                        <div class="item__img"><img src="https://www.treemall.com.tw/reward/Hall/150/imageQC11333763.jpg"></div>
+                        <div class="item__info">
+                            <h3 class="title">飛利浦隨鮮杯活氧果汁機 HR2872</h3>
+                            <p class="price">
+                                <span class="sale"><strong>$1388</strong></span>
+                            </p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <!-- 每頁內容到此結束 -->
+        <footer class="footer">
+            <p>Hami Point購物由中華電信委託神坊資訊股份有限公司經營。<br>本網全部內容與商品服務(包含開立發票)，皆由神坊資訊負責。<br>建議您使用Chrome或IE9以上版本的瀏覽器，可獲得較佳使用體驗。</p>
+        </footer>
+    </div>
+</body>
+</html>
