@@ -1100,7 +1100,183 @@ $(document).ready(function(){
 	});	
 });
 </script>
+<script>
+/*--用來格式化字串--*/
+String.prototype.format = function(){
+  var args = arguments;
+  return this.replace(/\{(\d+)\}/g, function(a, num){
+    return args[num] || a
+  })
+}
 
+/*--用來清空子選單內容--*/
+function emptySubMenuUl(strSubLevelName) {
+
+    var strSubUlSelecter = ".menu__content." + strSubLevelName;
+	
+	$(strSubUlSelecter).empty();
+}
+
+/*--用來添加子選單內容--*/
+function addSubMenuLi(strSubLevelName, listSubMenuHTML) {
+
+    var strSubUlSelecter = ".menu__content." + strSubLevelName;
+    
+	$(strSubUlSelecter)[0].innerHTML = listSubMenuHTML.join("");
+}
+</script>
+<script>
+/*--
+傳入字典以取得完全相符的子選單選項。傳入的字典必須包含篩選條件(key-value)。
+例如: 
+傳入{"subLevel":"sub2", "itemName":"團購/國泰商品"} 
+回傳[{"subLevel":"sub2","itemName":"團購/國泰商品","itemUrl":"../showroom/welfare?layer=1h&id=N","previousItem":"團購/國泰商品","boolNext":false}]
+--*/
+function getListOfItemDict(dictCondition) {
+var listSubMenu = [	    																											
+    	{
+    		"subLevel":"sub1",
+    		"itemName":"家電/大電",
+    		"itemUrl":"",
+    		"previousItem":"",
+    		"boolNext":true
+    	},				
+    					{
+    						"subLevel":"sub2",
+    						"itemName":"旗艦店",
+    						"itemUrl":"https://mall.cheerspoint.com.tw/showroom/cheerspoint?layer=1h&id=SV",
+    						"previousItem":"家電/大電",
+    						"boolNext":true
+    					},
+				    					{
+											"subLevel":"sub3",
+											"itemName":"SHARP夏普",
+											"itemUrl":"https://mall.cheerspoint.com.tw/showroom/cheerspoint?layer=2h&id=SV12",
+											"previousItem":"旗艦店",
+											"boolNext":true
+										},
+										]
+    
+	var listOfItemDict = [];
+	
+    for (i = 0; i < listSubMenu.length; i++) { 
+	
+	    var boolIsFulfill = true;
+		
+		for (var key in dictCondition){
+		    if (listSubMenu[i][key].toString().trim() != dictCondition[key].toString().trim()){
+			    boolIsFulfill = false;
+			}
+		}
+        if (boolIsFulfill) {
+            listOfItemDict.push(listSubMenu[i]);
+        };
+    };
+	return listOfItemDict;
+}
+</script>
+<script>
+/*--把 將要顯示的子選單選項 轉換成 HTML--*/
+function getStrSubLiHTML(dictItem){
+
+    var strSubLiHTML = ""
+    var strLiHasLeaf = "<li class=\"has-leaf\"><a href=\"{0}\"><span>{1}</span></a><a class=\"btn-next\"><i class=\"fa fa-angle-right\"></i></a></li>";
+	var strLiWithoutLeaf = "<li class=\"has-leaf\"><a href=\"{0}\"><span>{1}</span></a></li>"
+	
+    if (dictItem["boolNext"]) {
+        strSubLiHTML = strLiHasLeaf.format(dictItem["itemUrl"], dictItem["itemName"]);
+	} else if (!dictItem["boolNext"]) {
+		strSubLiHTML = strLiWithoutLeaf.format(dictItem["itemUrl"], dictItem["itemName"]);
+	}
+	return strSubLiHTML
+}
+
+/*--對所有 將要顯示的子選單選項 執行 getStrSubLiHTML--*/
+function getListOfSubLiHTML(listOfItemDict){
+    
+	var listOfSubLiString = [];
+	
+	for (i = 0; i < listOfItemDict.length; i++) { 
+        listOfSubLiString.push(getStrSubLiHTML(listOfItemDict[i]))
+    };
+	return listOfSubLiString;
+	
+}
+</script>
+
+<script>
+$(document).ready(function(){	
+/*--
+掛在 ".nav-mobile" 上面用來決定當前要顯示哪一層選單的 class名稱
+記得照階層順序排列
+如果要修改或增加，記得修改對應的 CSS	
+每個掛在 ".nav-mobile" 上面用來決定當前要顯示哪一層選單的 class對應的子選單 ul class名稱
+如果要修改或增加，記得修改對應的 CSS以及 HTML
+--*/
+
+	var listSubMenuLevel = ["show-sub1", "show-sub2", "show-sub3", "show-sub4", "show-sub5", "show-sub6"]
+	
+	var dictSubMenuClass = {
+		"show-sub1":"sub1",
+		"show-sub2":"sub2",
+		"show-sub3":"sub3",
+		"show-sub4":"sub4",
+		"show-sub5":"sub5",
+		"show-sub6":"sub6",
+	}
+	
+    /*nav show-sub open*/
+	$(document).on("click", ".btn-next", function(e) {
+	
+	    var strItemNameClicked = "";
+		var strCurrentMenuLevel = "";
+		var strNextMenuLevel = "";
+		var strSubMenuClass = "";
+	    var listOfItemDict = [];
+	    var listOfSubLiString = [];
+		
+		for (i = 0; i < listSubMenuLevel.length; i++) { 
+		    if ($(this).parents(".nav-mobile").hasClass(listSubMenuLevel[i])) {
+			    strCurrentMenuLevel = listSubMenuLevel[i];
+				strNextMenuLevel = listSubMenuLevel[i+1];
+	        }            
+        };
+		
+		strSubMenuClass = dictSubMenuClass[strNextMenuLevel]
+		emptySubMenuUl(strSubMenuClass); 
+	    strItemNameClicked = ($(this)[0].parentNode.getElementsByTagName("span")[0].innerText);
+        listOfItemDict = getListOfItemDict({"subLevel":strSubMenuClass, "previousItem":strItemNameClicked});
+        listOfSubLiString = getListOfSubLiHTML(listOfItemDict);
+        addSubMenuLi(strSubMenuClass, listOfSubLiString);
+		document.getElementById("menu-previous-title").innerHTML = strItemNameClicked;
+        
+	    $(this).parents(".nav-mobile").removeClass(strCurrentMenuLevel).addClass(strNextMenuLevel);
+
+	});
+	
+	/*nav show-sub close*/
+	$(document).on("click", ".nav-back", function(e) {
+	
+	    var strCurrentMenuLevel = "";
+		var strPreviousMenuLevel = "";
+		var menuPreviousTitleElement = document.getElementById("menu-previous-title");
+		var strOldPreviousTitle = menuPreviousTitleElement.innerText;
+		var strNewPreviousTitle = ""
+		
+	    for (i = 0; i < listSubMenuLevel.length; i++) { 
+		    if ($(this).parents(".nav-mobile").hasClass(listSubMenuLevel[i])) {
+			    strCurrentMenuLevel = listSubMenuLevel[i];
+				strPreviousMenuLevel = listSubMenuLevel[i-1];
+	        }            
+        };
+
+		strNewPreviousTitle = getListOfItemDict({"subLevel":dictSubMenuClass[strPreviousMenuLevel], "itemName":strOldPreviousTitle})[0]["previousItem"]
+		menuPreviousTitleElement.innerHTML = strNewPreviousTitle;
+		
+		$(this).parents(".nav-mobile").removeClass(strCurrentMenuLevel).addClass(strPreviousMenuLevel);
+	});
+});
+</script>
 
 </head>
 <body>
