@@ -2,7 +2,7 @@ from flask import Flask, render_template, request, url_for, redirect
 
 @app.route('/', methods=['GET'])
 def index():
-    return render_template('index.html')
+    return render_template('0.html')
 
 
 if __name__ == '__main__':
