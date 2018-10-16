@@ -1,0 +1,1790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+    <title>中華電信Hami Point購物</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="https://www.treemall.com.tw/j_service/treemall_index/css/tool/slick/slick.css"/>
+    <script type="text/javascript" src="https://www.treemall.com.tw/j_service/treemall_index/js/jquery/jquery-1.12.4.min.js"></script>
+    <script type="text/javascript" src="https://www.treemall.com.tw/j_service/treemall_index/js/tool/slick/slick.min.js"></script>
+
+
+<style type="text/css">
+@media only screen and (max-width: 1023px) 
+{
+*
+{
+    font-family: "microsoft jhenghei", arial, sans-serif;
+}
+a:link
+{
+    color: #333333;
+    text-decoration: none;
+    font-size: 100%;
+    font-family: "microsoft jhenghei", arial, sans-serif;
+}
+a:visited
+{
+    color: #333333;     
+    text-decoration: none;
+    font-size: 100%;
+    font-family: "microsoft jhenghei", arial, sans-serif;
+}   
+body, 
+html 
+{
+    padding: 0;
+    margin: 0;
+    font-size: 16px;
+    letter-spacing: 0.05rem;
+    line-height: 1.4rem;
+}
+h2 
+{
+    display: block;
+    font-size: 1.5em;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;
+}
+h3 
+{
+    display: block;
+    font-size: 1.17em;
+    -webkit-margin-before: 0em;	
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    font-weight: bold;				
+}
+img 
+{
+    display: block;
+    max-width: 100%;
+    margin: auto;
+}
+p
+{
+display: block;
+ -webkit-margin-before: 0em;
+ -webkit-margin-after: 0em;
+ -webkit-margin-start: 0px;
+ -webkit-margin-end: 0px;
+ }
+ul 
+{
+    display: block;
+    list-style-type: none;
+    -webkit-margin-before: 0em;
+    -webkit-margin-after: 0em;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-start: 0px;
+}
+.main
+{
+    min-height : calc(100vh - 100px);
+}	
+.wrapper 
+{
+    width: 100%;
+    max-width: 1024px;
+    margin: 0 auto;
+    background: white;
+    transition-duration: 0.3s;
+}
+.leaveBlankForHeader
+{
+    height: 70px;
+}
+}
+@media only screen and (min-width: 1024px) 
+{ 
+	.Mobile_Show 
+	{
+	    display:none;
+	}
+}
+@media only screen and (max-width: 1023px) 
+{
+	.PC_Show 
+	{
+	    display:none;
+	}
+        .slick-slide
+        {
+            height: auto;
+        }
+}
+/*--開始 天--*/	
+@media only screen and (max-width: 1023px) 
+{
+	.header 
+       {
+	    border-top: 2px solid #00AA00;
+	    border-bottom: 1px solid #e1e1e1;
+	    padding-top: 8px;
+	    padding-bottom: 4.78px;
+	    z-index: 10;
+	    position: fixed;
+	    top: 0;
+	    left: 0;
+	    min-width: 100%;
+	    background-color: #ffffff;
+	}
+}
+@media only screen and (min-width: 1023px){
+	.header
+	{
+	    border-top: 2px solid #00AA00;
+	    border-bottom: 1px solid #e1e1e1;
+	    padding-top: 8px;
+	    padding-bottom: 4.78px;
+	    z-index: 10;
+	    position: fixed;
+	    width: 1024px;
+	    top: 0;
+	    background-color: #ffffff;
+	}	
+}
+	.container 
+	{
+	    padding: 0 2%;
+	}
+	.header [class^="nav-"] 
+	{
+	    display: inline-block;
+	    vertical-align: middle;
+	}
+    /*--開始 天---左上角開啟選單用的按鈕--*/
+	.header .nav-btn 
+	{
+	    position: relative;
+	    width: 30px;
+	    height: 30px;
+	    box-sizing: border-box;
+	}
+	.header .nav-btn span 
+	{
+	    display: block;
+	    width: 100%;
+	    height: 3px;
+	    box-sizing: border-box;
+	    background: #00AA00;
+	    position: absolute;
+	    top: calc(50% - 1px);
+	}
+	.header .nav-btn span::before, 
+	.header .nav-btn span::after 
+	{
+	    content: "";
+	    width: 100%;
+	    height: 100%;
+	    box-sizing: border-box;
+	    position: absolute;
+	    background: #00AA00;
+	}
+	.header .nav-btn span::before 
+	{
+	    top: -10px;
+	}
+	.header .nav-btn span::after 
+	{
+	    top: 10px;
+	}
+	.header .nav-btn::after 
+	{
+	    content: "";
+	    position: fixed;
+	    top: -5vh;
+	    left: -50px;
+	    width: 0;
+	    height: 110vh;
+	    box-sizing: border-box;
+	    background: rgba(0, 0, 0, 0.85);
+	    z-index: 50;
+	    transition: width 0.3s;
+	}
+    /*--結束 天---左上角開啟選單用的按鈕--*/
+     /*--開始 天---logo、搜尋框、購物車以及會員icon的設定--*/
+	.header .nav-logo 
+	{
+	  	margin-left: 8px;
+	  	max-width: 20%;
+	  	max-width: 129px; //logo寬度最多129px
+	}
+	.header .nav-action 
+	{
+	  	float: right;
+		padding-top: 6px;
+	}
+	.header .nav-action .search, 
+	.header .nav-action .cart, 
+	.header .nav-action .certified 
+	{
+	  	display: inline-block;
+	}
+	.header .nav-action .search .fa, 
+	.header .nav-action .cart .fa, 
+	.header .nav-action .certified .fa 
+	{
+	  	font-size: 1.8rem;
+	  	color: #00AA00;
+	}
+	.header .nav-action .certified a 
+	{
+	    color: #00AA00;
+	    font-weight: bold;
+	    display: block;
+	}
+	.header .nav-action .certified a .fa 
+	{
+	 	margin-right: 8px;
+	}
+	.header .nav-action .search__content 
+	{
+	    position: absolute;
+	    background: white;
+	    left: 0;
+	    top: 55px;
+	    width: 100%;
+	    z-index: 5;
+	    box-sizing: border-box;
+	    box-shadow: 0 3px 3px rgba(0, 0, 0, 0.4);
+	    display: -webkit-flex;
+	    display: -moz-flex;
+	    display: -ms-flex;
+	    display: -o-flex;
+	    display: flex; 
+	    max-height: 0;
+	    overflow: hidden;
+	    padding: 0 15px;
+	    transition: 0.3s;
+	}
+	.header .nav-action .search__content input 
+	{
+	  	width: 100%;
+	  	border: 1px solid #00AA00;
+	  	font-size: 16px;
+	  	padding: 4px 6px;
+	  	border-radius: 4px 0 0 4px;
+	}
+	.header .nav-action .search__content .btn 
+	{
+	 	width: 70px;
+	  	padding: 8px;
+	  	border-radius: 0 4px 4px 0;
+	  	box-shadow: none;
+	}
+	.header .nav-action .search__content.active 
+	{
+	  	padding: 15px;
+	  	max-height: 100px;
+	}
+	.header .nav-action .cart 
+	{
+	  	position: relative;
+	  	margin-left: 15px;
+	  	margin-right: 8px;
+	}
+    /*--結束 天---logo、搜尋框、購物車以及會員icon的設定--*/
+    /*--開始 天---側邊選單設定--*/
+	.menu-open .header .nav-btn::after 
+	{
+		width: 100vw;
+	}
+	.menu-open .header .nav-menu 
+	{
+	  	opacity: 1;
+	  	visibility: visible;
+	}	
+	.header .nav-menu 
+	{
+		border-top: 2px solid #00AA00;
+		background: white;
+		position: fixed;
+		padding-bottom: 80px;
+		width: 280px;
+		height: 100vh;
+		box-sizing: border-box;
+		top: 0;
+		transform: translateX(-100%);
+		z-index: 300;
+		overflow-y: auto;
+		opacity: 0;
+		visibility: hidden;
+	}
+	.header .nav-menu .menu__block 
+	{
+		padding: 8px 0;
+		border-bottom: 1px solid #bebebe;
+	}
+	.header .nav-menu .menu__block:nth-of-type(2) 
+	{
+	  	border-bottom-color: #00AA00;
+	}
+	.header .nav-menu .menu__block:last-of-type 
+	{
+	  	border-bottom: none;
+	}
+	.header .nav-menu .menu__block a 
+	{
+	  	color: #333;
+	  	display: block;
+	}
+	.header .nav-menu .menu__block .member
+	 {
+	  	display: -webkit-flex;
+	  	display: -moz-flex;
+	  	display: -ms-flex;
+	  	display: -o-flex;
+	  	display: flex;
+	  	justify-content: space-between;
+	  	padding: 0 15px;
+	}
+	.header .nav-menu .menu__block .member .fa 
+	{
+	  	color: #00AA00;
+	  	font-size: 1.4rem;
+	}
+	.header .nav-menu .menu__block .links li, 
+	.header .nav-menu .menu__block .menu li 
+	{
+	  	border-bottom: 1px solid rgba(190, 190, 190, 0.4);
+	}
+	.header .nav-menu .menu__block .links li a, 
+	.header .nav-menu .menu__block .menu li a 
+	{
+	  	padding: 6px 15px;
+	  	white-space: nowrap;
+	}
+	.header .nav-menu .menu__block .links li:last-of-type, 
+	.header .nav-menu .menu__block .menu li:last-of-type 
+	{
+	  	border-bottom: none;
+	}
+	.header .nav-menu .menu__block .menu-previous 
+	{
+	  	background: rgba(190, 190, 190, 0.4);
+	  	margin-top: -8px;
+	  	display: inline-block;
+	}
+	.header .nav-menu .menu__block .menu-previous-title 
+	{
+	  	display: inline-block;
+	  	margin-left: 20px;
+	  	vertical-align: top;
+	}
+	.header .nav-menu .menu__block .menu-previous a 
+	{
+	  	padding: 15px;
+	}
+	.header .nav-menu .menu__block .menu-previous .fa 
+	{
+	  	font-size: 1.5rem;
+                padding-right: 10px;
+                padding-left: 10px;
+                color: rgba(136, 136, 136, 0.8);
+                line-height: 1.5;
+	}
+	.header .nav-menu .menu__block .menu li 
+	{
+	  	border-bottom-color: rgba(0, 222, 0, 0.4);
+	}
+	.header .nav-menu .menu__block .menu li.has-leaf 
+	{
+	  	position: relative;
+	}
+	.header .nav-menu .menu__block .menu li.has-leaf a 
+	{
+	  	padding-right: 30px;
+	}
+	.header .nav-menu .menu__block .menu li.has-leaf .btn-next 
+	{
+	  	position: absolute;
+                right: 0;
+                top: 0;
+                width: 30px;
+                height: 100%;
+                box-sizing: border-box;
+                font-size: 1.5rem;
+                text-align: center;
+                background: rgba(0, 222, 0, 0.2);
+                color: rgba(136, 136, 136, 0.8);
+	}
+    /*--結束 天---側邊選單設定--*/ 
+    /*--開始 天 nav-bar設定--*/
+     .nav-mobile .nav-bar
+     {
+	height: calc(100vh - 50px);
+    	overflow: hidden;
+    	overflow-y: auto;
+    	position: absolute;
+    	width: 100%;
+    	left: 0;
+    	display: block !important;
+      }
+	body.menu-open 
+	{
+	    overflow-y: hidden;
+	    position: fixed;
+	}
+	body.menu-open .wrapper 
+	{
+	  	transform: translateX(280px);
+	}
+	.nav-mobile .nav-bar ul 
+	{
+		width: 100%;
+		position: absolute;
+		-moz-transition-duration: 0.3s;
+		-o-transition-duration: 0.3s;
+		-webkit-transition-duration: 0.3s;
+		transition-duration: 0.3s;
+        }
+	.nav-mobile .nav-bar ul li 
+	{
+		width: 100%;
+		height: 40px;
+		border-bottom: 1px solid #e3d5ba;
+		position: relative;
+		float: left;
+        }
+    /*--結束 天 nav-bar設定--*/
+/*--結束 天--*/
+/*--開始 關鍵字搜尋、按鈕設計--*/
+    button 
+	{
+	  	border: none;
+	  	font-size: 1rem;
+	  	font-size: initial;
+	}
+	.btn 
+	{
+	  	display: inline-block;
+	  	padding: 0.5rem 0.8rem;
+	  	border-radius: 4px;
+	  	box-shadow: 1px 1px 10px rgba(190, 190, 190, 0.6);
+	}	
+	.btn.green
+	{
+		background: #00AA00;
+		border-color: #00AA00;
+		color: white;
+	}
+/*--結束 關鍵字搜尋、按鈕設計--*/
+/*--開始 商品list上方的標題--*/
+	.home .section .section__title
+	{
+	    font-size: 0.8rem;
+            text-align: center;
+            position: relative;
+            padding: 5px 0;
+	}
+	.home .section .section__title h2
+	{
+	    display: inline-block;
+            width: 100%;
+            max-width: 300px;
+            background: white;
+            position: relative;
+            z-index: 1;
+	}
+	.home .section .section__title::after
+	{
+	    position: absolute;
+            content: "";
+            display: block;
+            background: rgba(190, 190, 190, 0.15);
+            width: 100%;
+            height: 18px;
+            box-sizing: border-box;
+            top: calc(50% - 9px);
+	}
+/*--結束 商品list上方的標題--*/
+/*--開始 首頁商品區1--*/
+	.section .pd-list
+	{
+		display: flex;
+		flex-wrap: wrap;
+		padding: 1rem 10px 0 10px;
+	}
+	.section .pd-list .item 
+	{
+		width: 50%;
+		padding: 0 5px;
+		box-sizing: border-box;
+		text-align: center;
+		margin-bottom: 1.5rem;
+	}
+	@media only screen and (min-width: 768px){
+		.section .pd-list .item 
+		{
+		width: 25%;
+		padding: 0 5px;
+		box-sizing: border-box;
+		text-align: center;
+		margin-bottom: 1.5rem;
+		}
+	}
+	.pd-list .item__info .price > * 
+	{
+		display: block;
+	}
+	.section .pd-list .item > a
+	{
+		display: block;
+	}
+	.pd-list .item__img 
+	{
+		border: 1px solid #bebebe;
+	}
+	.pd-list .item__info .title 
+	{
+		font-size: 1rem;
+		height: 3.2rem;
+		font-weight: normal;
+		color: #333;
+		margin-bottom: 0.2rem;
+		overflow: hidden;
+		padding: 0.5rem;
+		box-sizing: border-box;
+	}
+	.pd-list .item__info .price .orig 
+	{
+		color: #bebebe;
+		text-decoration: line-through;
+	}
+	.pd-list .item__info .price .sale 
+	{
+		color: #ff0000;
+	}
+	.pd-list .item__info .price .sale strong
+	{
+		font-size: 1.2rem;
+	}
+/*--結束 首頁商品區1--*/
+	
+/*--開始 首頁商品區2--*/
+	.pd-list .item__info .brief 
+	{
+		background: #fb591c;
+		color: white;
+		white-space: nowrap;
+		text-overflow: ellipsis;
+                overflow: hidden;
+	}
+/*--結束 首頁商品區2--*/
+	
+/*--開始 首頁商品區3--*/
+	.section.preferential
+	{
+		background: #f8c917;
+	}
+	.preferential.section .section__title h2
+	{
+		background: transparent;
+		color: white;
+	}
+	.preferential .pd-list .item__info .brief 
+	{
+		background: #a18d58;
+	}
+	.preferential .pd-list .item > a 
+	{
+		background: white;
+		box-shadow: 0 0 0 8px white;
+	}
+/*--結束 首頁商品區3--*/
+	
+/*--開始 首頁標題設定--*/
+	.home .section .section__title.blue
+	{
+		color: #3375b6;
+	}
+	.home .section .section__title.red
+	{
+		color: #dd1b1b;
+	}
+	.preferential.section .section__title 
+	{
+		background: #dd1b1b;
+	}
+/*--結束 首頁標題設定--*/
+/*--開始 輪播牆--*/
+        .slick-slider
+        {
+	    position : relative;
+	}
+	.slick-slider .slick-slide img
+	{
+	    width: 100%;
+            margin : 0 auto;
+	}
+	.slick-slider .slick-arrow
+	{
+	    font-size : 4rem;
+	    position : absolute;
+	    z-index : 1;
+	    top : calc(50% - 2rem);
+	    color : white;
+	    text-shadow : 1px 1px 3px rgba(0, 0, 0, 0.2);
+	}
+	.slick-slider .slick-arrow:first-of-type
+	{
+		left : 1rem;
+	}
+	.slick-slider .slick-arrow:last-of-type
+	{
+		right : 1rem;
+	}
+	.slick-slider .slick-dots
+	{
+		position : absolute;
+		right : 1rem;
+		bottom : 1rem;
+		width : auto;
+	}
+	.slick-slider .slick-dots li
+	{
+		margin : 0;
+	}
+	.slick-slider .slick-dots li button:before
+	{
+		color : white;
+	}
+	.slick-slider .slick-dotted
+	{
+		margin-bottom : 1rem;
+	}
+	.slick-dots li button
+	{
+		border: 0;
+		background: transparent;
+		display: block;
+		height: 10px;
+		width: 100%;
+		outline: none;
+		line-height: 0px;
+		padding: 5px;
+		cursor: pointer;
+		text-indent: -9999px;
+	}
+/*--結束 輪播牆--*/
+/*--開始 廣告--*/
+	.ad-list
+	{
+		display: -webkit-flex;
+		display: -moz-flex;
+		display: -ms-flex;
+		display: -o-flex;
+		display: flex;
+		flex-wrap: wrap;
+		padding: 15px 5px;
+	}
+	.ad-list .item:first-of-type, 
+	.ad-list .item:nth-of-type(2) 
+	{
+		width: 50%;
+		margin-bottom: 0.3rem;
+		padding: 0 5px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	.ad-list .item 
+	{
+		width: 50%;
+		padding: 0 5px;
+		box-sizing: border-box;
+		text-align: center;
+	}
+	.ad-list .item a 
+	{
+		display: inline-block;
+	}
+/*--結束 廣告--*/
+	.footer 
+	{
+		padding: 8px 15px;
+		background: #00AA00;
+		text-align: center;
+		font-size: 0.6rem;
+		color: rgba(255, 255, 255, 0.9);
+	}
+/*-------------------------------------------------------------------------------------------*/
+@media only screen and (max-width: 1023px) {
+	#adbn-mobile {
+	  width: 100%;
+	  height: 34vw; //因為廣告圖片的長寬比約為 1:3
+	  position: relative;
+	}
+}
+.slick-slider 
+{
+  position: relative;
+}
+.slick-slider .slick-slide img 
+{
+  margin: 0 auto;
+}
+.slick-slider .slick-arrow 
+{
+  font-size: 3rem;
+  color: #fcd72c;
+  position: absolute;
+  z-index: 1;
+  top: calc(50% - 2rem);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+.slick-slider .slick-arrow:first-of-type 
+{
+  left: 1rem;
+}
+.slick-slider .slick-arrow:last-of-type 
+{
+  right: 1rem;
+}
+.slick-slider .slick-dots 
+{
+  position: absolute;
+  right: 45%;
+  bottom: 1rem;
+  width: auto;
+}
+.slick-slider .slick-dots li 
+{
+  margin: 0;
+  background-color: #e7e7e7
+}
+.slick-slider .slick-dots li button:before
+ {
+  color: white;
+}
+.slick-slider.slick-dotted
+{
+  margin-bottom: 1rem;
+}
+/* Arrows */
+.slick-prev,
+.slick-next
+{
+    font-size: 0;
+    line-height: 0;
+
+    position: absolute;
+    top: 50%;
+
+    display: block;
+
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+
+    cursor: pointer;
+
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover,
+.slick-prev:focus,
+.slick-next:hover,
+.slick-next:focus
+{
+    color: transparent;
+    outline: none;
+    background: transparent;
+}
+.slick-prev:hover:before,
+.slick-prev:focus:before,
+.slick-next:hover:before,
+.slick-next:focus:before
+{
+    opacity: 1;
+}
+.slick-prev.slick-disabled:before,
+.slick-next.slick-disabled:before
+{
+    opacity: .25;
+}
+
+.slick-prev:before,
+.slick-next:before
+{
+    font-family: 'slick';
+    font-size: 20px;
+    line-height: 1;
+
+    opacity: .75;
+    color: white;
+
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.slick-prev
+{
+    left: -25px;
+}
+[dir='rtl'] .slick-prev
+{
+    right: -25px;
+    left: auto;
+}
+.slick-prev:before
+{
+    content: '←';
+}
+[dir='rtl'] .slick-prev:before
+{
+    content: '→';
+}
+
+.slick-next
+{
+    right: -25px;
+}
+[dir='rtl'] .slick-next
+{
+    right: auto;
+    left: -25px;
+}
+.slick-next:before
+{
+    content: '→';
+}
+[dir='rtl'] .slick-next:before
+{
+    content: '←';
+}
+/* Dots */
+/* line 179, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dotted.slick-slider {
+  margin-bottom: 0px;
+}
+
+/* line 183, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots {
+  position: absolute;
+  bottom: 0px;
+  list-style: none;
+  display: block;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+}
+
+@media screen and (min-width: 970px) {
+  /* line 183, ../../../sass/tool/slick/slick-theme.scss */
+  .slick-dots {
+    background: url(../../../images/share/bg.10.png);
+  }
+}
+
+/* line 195, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots li {
+  position: relative;
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  padding: 0;
+  margin: 3px;
+  cursor: pointer;
+  color: #fff;
+  overflow: hidden;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  border-radius: 50%;
+}
+
+@media screen and (min-width: 970px) {
+  /* line 195, ../../../sass/tool/slick/slick-theme.scss */
+  .slick-dots li {
+    height: 30px;
+    width: calc(100% / 6);
+    float: left;
+    -webkit-border-radius: 0%;
+    -moz-border-radius: 0%;
+    border-radius: 0%;
+    margin: 0;
+  }
+}
+
+/* line 217, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots li button {
+  border: 0;
+  background: transparent;
+  display: block;
+  height: 10px;
+  width: 100%;
+  outline: none;
+  line-height: 0px;
+  padding: 5px;
+  cursor: pointer;
+  text-indent: -9999px;
+}
+/* line 229, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots li button:hover, .slick-dots li button:focus {
+  outline: none;
+}
+/* line 231, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots li button:hover:before, .slick-dots li button:focus:before {
+  opacity: 1;
+}
+/*--開始 伸縮選單的設定--*/
+.nav-mobile.show-sub1 .nav-back 
+{
+  visibility: hidden;
+}
+.nav-mobile.show-sub1 .sub1 
+{
+  left: 0%;
+}
+.nav-mobile.show-sub1 .sub2,
+.nav-mobile.show-sub1 .sub3,
+.nav-mobile.show-sub1 .sub4,
+.nav-mobile.show-sub1 .sub5,
+.nav-mobile.show-sub1 .sub6 
+{
+  left: 100%;
+}
+.nav-mobile.show-sub2 .sub1 
+{
+  left: -100%;
+}
+.nav-mobile.show-sub2 .sub2 
+{
+  left: 0%;
+}
+.nav-mobile.show-sub2 .sub3,
+.nav-mobile.show-sub2 .sub4,
+.nav-mobile.show-sub2 .sub5,
+.nav-mobile.show-sub2 .sub6 
+{
+  left: 100%;
+}
+.nav-mobile.show-sub3 .sub1,
+.nav-mobile.show-sub3 .sub2 
+{
+  left: -100%;
+}
+.nav-mobile.show-sub3 .sub3 
+{
+  left: 0%;
+}
+.nav-mobile.show-sub3 .sub4,
+.nav-mobile.show-sub3 .sub5,
+.nav-mobile.show-sub3 .sub6 
+{
+  left: 100%;
+}
+.nav-mobile.show-sub4 .sub1,
+.nav-mobile.show-sub4 .sub2,
+.nav-mobile.show-sub4 .sub3 
+{
+  left: -100%;
+}
+.nav-mobile.show-sub4 .sub4 
+{
+  left: 0%;
+}
+.nav-mobile.show-sub4 .sub5,
+.nav-mobile.show-sub4 .sub6
+{
+  left: 100%;
+}
+.nav-mobile.show-sub5 .sub1,
+.nav-mobile.show-sub5 .sub2,
+.nav-mobile.show-sub5 .sub3,
+.nav-mobile.show-sub5 .sub4 
+{
+  left: -100%;
+}
+.nav-mobile.show-sub5 .sub5 
+{
+  left: 0%;
+}
+.nav-mobile.show-sub5 .sub6
+{
+  left: 100%;
+}
+.nav-mobile.show-sub5 .sub1,
+.nav-mobile.show-sub5 .sub2,
+.nav-mobile.show-sub5 .sub3,
+.nav-mobile.show-sub5 .sub4,
+.nav-mobile.show-sub5 .sub5 
+{
+  left: -100%;
+}
+.nav-mobile.show-sub5 .sub6 
+{
+  left: 0%;
+}
+/*--結束 伸縮選單的設定--*/
+
+@media screen and (min-width: 970px) {
+  /* line 217, ../../../sass/tool/slick/slick-theme.scss */
+  .slick-dots li button {
+    height: 30px;
+    text-indent: 0;
+  }
+}
+
+/* line 240, ../../../sass/tool/slick/slick-theme.scss */
+.slick-dots li.slick-active {
+  color: #8e5c04;
+  background: #fcd72c;
+}
+@media only screen and (max-width: 767px) {
+  .ad-list .item {
+    width: 50%;
+  }
+  .ad-list .item:first-of-type, .ad-list .item:nth-of-type(2) {
+    margin-bottom: 0.3rem;
+  }
+}
+@media only screen and (min-width: 768px) {
+	.ad-list {
+   flex-wrap: nowrap;
+  }
+}
+</style>
+
+
+    <!--開始 Javascript設定-->
+<script>
+/*--搜尋功能，行動版一律採用關鍵字搜尋--*/	
+	function forSearchMobile(){
+		if (document.getElementById("keywordsMobile").value == "" ) {
+			alert("請輸入關鍵字!");
+		} else {
+			var name = encodeURIComponent(document.getElementById("keywordsMobile").value);
+			document.getElementById("keywordsHiddenMobile").value = name;
+			document.frmSearchKeyWordMobile.submit(); 
+		}
+	}
+</script>	
+
+<script>
+
+$(document).ready(function(){
+	$(".nav-btn").click(function () {
+		$("body, html, .nav-menu").stop();
+		$("body").toggleClass("menu-open");
+	});
+	$(".search__icon").click(function () {
+		$(".search__content").toggleClass("active");
+	});
+	$(".slider").slick({
+		infinite: true,
+    	slidesToShow: 1,
+    	autoplay: true,
+    	autoplaySpeed: 2000,
+		dots: true,
+    	prevArrow: '<i class="fa fa-angle-left"></i>',
+		nextArrow: '<i class="fa fa-angle-right"></i>',
+	});
+	$(".title__name__remarks").click(function () {
+		$(".block__remarks").toggle();
+	});	
+	$(".title__name__warranty").click(function () {
+		$(".block__warranty").toggle();
+	});	
+});
+</script>
+
+
+</head>
+<body>
+    <div class="wrapper">
+
+    <!--開始 版頭-->
+        <header class="header">
+	<div class="container">
+            <div class="nav-btn"><span></span></div>
+            <div class="nav-logo"><a href="http://mall.cheerspoint.com.tw/"><img src="https://www.cheerspoint.com.tw/imagesn1/logo.png"></a></div>
+            <div class="nav-action">
+       	        <!-- 搜尋 -->
+           	<div class="search">
+                    <form method="post" name="frmSearchKeyWordMobile" onsubmit="return forSearchMobile();" target="_top" action="http://mall.cheerspoint.com.tw/quidditch/cheerspoint">
+		    <span class="search__icon"><i class="fa fa-search"></i></span>
+		    <div class="search__content">
+		        <input type="text" id="keywordsMobile" placeholder="請輸入關鍵字">							
+	                <input name="keywords" type="hidden" id="keywordsHiddenMobile"/>                        	
+		        <button type="submit" class="btn green" name="qnextMobile">搜尋</button>							
+		    </div>
+		    </form>
+            	</div>                
+                 <!-- 登入  -->
+	         <div class="cart">
+	             <a href="https://mall.cheerspoint.com.tw/ChtMall/loginHome.do" target="_parent"><i class="fa fa-user"></i></a>
+	         </div>
+             </div>       
+    	 </div>
+	<div class="nav-menu">
+    	<div class="menu__block">
+    	  <ul class="member">
+	   <li><a href="https://www.cheerspoint.com.tw/search_point.php" target="_blank"><i class="fa fa-user"></i>會員中心|點數查詢</a></li>
+           <li><a href="http://mall.cheerspoint.com.tw/ChtMall/logout">登出</a></li>
+	  </ul>
+    	</div>
+    	<div class="menu__block">
+
+    	    <ul class="links">        
+        <!-- 開始 上稿區域 -->           				
+				<li><a href="" target="_blank">A</a></li>	           
+	    <!-- 結束 上稿區域 -->	
+            </ul>
+
+    	</div>
+    	<div class="menu__block">
+	    	    <div class="menu">
+	    	        <!-- 預設要有show-sub1，會自動切換手機按鈕層次，目前預設最高 6 組 -->
+	    	        <div class="nav-mobile show-sub1">
+	    	            <div class="menu-previous nav-back">
+					    	<i class="fa fa-angle-left"></i>
+						</div>
+						<div class="menu-previous-title" id="menu-previous-title"></div>
+						<div class="nav-bar">
+						    <ul class="menu__content sub1">
+								<li class="has-leaf">
+									<a>
+								    	<span>家電/大電</span>
+									</a>
+									<a class="btn-next"><i class="fa fa-angle-right"></i></a>
+								</li>
+								<li class="has-leaf">
+									<a>
+								    	<span>居家生活</span>
+									</a>
+									<a class="btn-next"><i class="fa fa-angle-right"></i></a>
+								</li>
+								<li class="has-leaf">
+									<a>
+								    	<span>3C資訊</span>
+									</a>
+									<a class="btn-next"><i class="fa fa-angle-right"></i></a>
+								</li>								
+								<li class="has-leaf">
+									<a>
+								    	<span>美妝鞋包</span>
+									</a>
+									<a class="btn-next"><i class="fa fa-angle-right"></i></a>
+								</li>
+								<li class="has-leaf">
+									<a>
+								    	<span>美食旅行</span>
+									</a>
+									<a class="btn-next"><i class="fa fa-angle-right"></i></a>
+								</li>							
+      
+            <!-- 開始 上稿區域 -->				
+            <li class="has-leaf">
+			    <a href="">
+					<span>B</span>
+			    </a>					
+			</li>            
+	    <!-- 結束 上稿區域 -->	
+																						
+						    </ul>
+						    <ul class="menu__content sub2">
+						    </ul>
+						    <ul class="menu__content sub3">
+						    </ul>
+						    <ul class="menu__content sub4">
+						    </ul>
+						    <ul class="menu__content sub5">
+						    </ul>
+						    <ul class="menu__content sub6">
+						    </ul>
+						</div>
+	    	        </div>   	        
+	    	    </div>
+	    	</div>
+    </div>
+		</header>
+    <!--結束 版頭-->
+
+        <!--開始 主區塊-->
+        <div class="main">
+        <div class="leaveBlankForHeader"></div>
+            <div class="home">
+
+            <!--開始 輪播牆-->
+                <!--#include virtual="輪播牆.shtml"-->
+            <!--結束 輪播牆-->
+
+            <!--開始 點數兌換推薦-->
+<section class="section">
+	<div class="section__title blue">
+		<h2>點數兌換推薦</h2>
+	</div>
+<div class="pd-list">
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33614083">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1287/75ad8dd2-ea4f-442c-b65e-6aa9d176beff.jpeg">
+							</div>
+							<div class="item__info">
+								<h3 class="title">【日本Dashiang】350ml真水超真空不鏽鋼牛奶瓶(紫/綠/粉)(3色可選)(紫色)</h3>
+								<p class="price">
+									<span class="orig">
+										$499
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											270
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?JcRK9Zis1u5s8Vikhp8sI9hxFWXO7vz%2Fj0y0m7%2BCc9U%3D">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1287/1f3f2cf3-e070-4da5-939c-24d0d7e716d5.jpeg">
+							</div>
+							<div class="item__info">
+								<h3 class="title">【樂扣樂扣】CLASSICS系列保鮮盒/長方形1L(HPL812)</h3>
+								<p class="price">
+									<span class="orig">
+										$299
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											199
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33614083">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1287/75ad8dd2-ea4f-442c-b65e-6aa9d176beff.jpeg">
+							</div>
+							<div class="item__info">
+								<h3 class="title">【日本Dashiang】350ml真水超真空不鏽鋼牛奶瓶(紫/綠/粉)(3色可選)(紫色)</h3>
+								<p class="price">
+									<span class="orig">
+										$499
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											270
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?JcRK9Zis1u5s8Vikhp8sI9hxFWXO7vz%2Fj0y0m7%2BCc9U%3D">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1287/1f3f2cf3-e070-4da5-939c-24d0d7e716d5.jpeg">
+							</div>
+							<div class="item__info">
+								<h3 class="title">【樂扣樂扣】CLASSICS系列保鮮盒/長方形1L(HPL812)</h3>
+								<p class="price">
+									<span class="orig">
+										$299
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											199
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+</div>						
+</section>
+            <!--結束 點數兌換推薦-->
+
+            <!--開始 今日搶優惠-->
+<section class="section">
+	<div class="section__title red">
+		<h2>今日搶優惠</h2>
+	</div>
+<div class="pd-list">
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34287857">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/36c22c45-c076-411e-9b0f-b28aabdc3460.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">★贈 HEPA濾網</div>
+								<h3 class="title">【LG樂金】WIFI遠控 雙眼小精靈 掃地清潔機器人 (變頻版) / 典雅紅 VR66713LVM</h3>
+								<p class="price">
+									<span class="orig">
+										$23900
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											16900
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33652856">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/d85da3e0-2768-44e2-981d-5f00a936d4d9.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">經典電影圖案</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】LED手電筒-蜘蛛人(71767)</h3>
+								<p class="price">
+									<span class="orig">
+										$580
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											480
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34287857">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/36c22c45-c076-411e-9b0f-b28aabdc3460.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">★贈 HEPA濾網</div>
+								<h3 class="title">【LG樂金】WIFI遠控 雙眼小精靈 掃地清潔機器人 (變頻版) / 典雅紅 VR66713LVM</h3>
+								<p class="price">
+									<span class="orig">
+										$23900
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											16900
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33652856">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/d85da3e0-2768-44e2-981d-5f00a936d4d9.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">經典電影圖案</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】LED手電筒-蜘蛛人(71767)</h3>
+								<p class="price">
+									<span class="orig">
+										$580
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											480
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34287857">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/36c22c45-c076-411e-9b0f-b28aabdc3460.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">★贈 HEPA濾網</div>
+								<h3 class="title">【LG樂金】WIFI遠控 雙眼小精靈 掃地清潔機器人 (變頻版) / 典雅紅 VR66713LVM</h3>
+								<p class="price">
+									<span class="orig">
+										$23900
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											16900
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33652856">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/d85da3e0-2768-44e2-981d-5f00a936d4d9.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">經典電影圖案</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】LED手電筒-蜘蛛人(71767)</h3>
+								<p class="price">
+									<span class="orig">
+										$580
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											480
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34287857">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/36c22c45-c076-411e-9b0f-b28aabdc3460.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">★贈 HEPA濾網</div>
+								<h3 class="title">【LG樂金】WIFI遠控 雙眼小精靈 掃地清潔機器人 (變頻版) / 典雅紅 VR66713LVM</h3>
+								<p class="price">
+									<span class="orig">
+										$23900
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											16900
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33652856">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1288/d85da3e0-2768-44e2-981d-5f00a936d4d9.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">經典電影圖案</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】LED手電筒-蜘蛛人(71767)</h3>
+								<p class="price">
+									<span class="orig">
+										$580
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											480
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+</div>						
+</section>
+            <!--結束 今日搶優惠-->
+
+            <!--開始 熱銷品牌推薦-->
+<section class="section preferential">
+	<div class="section__title">
+		<h2>熱銷品牌推薦</h2>
+	</div>
+<div class="pd-list">
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=32880230">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/7a341aa5-465c-4b9a-a71d-f03849e1b982.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">超大口徑設計</div>
+								<h3 class="title">【THERMOS膳魔師】不鏽鋼真空食物燜燒罐0.5L-黑色(JBN-500-BK)</h3>
+								<p class="price">
+									<span class="orig">
+										$1300
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											599
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34641899">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/71e28be2-0b00-4da0-b75d-485e2475eb3a.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">新一代T2省電燈泡</div>
+								<h3 class="title">【飛利浦PHILIPS】Tornado省電燈泡T2 23W白光E27 120V-6入組</h3>
+								<p class="price">
+									<span class="orig">
+										$1014
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											894
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33809216">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/10cfd13e-6654-4647-8391-8f8ee6f3be8e.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">荷蘭實驗室研發</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】飛利浦安心捕蚊燈 15W 電擊式 (E300)</h3>
+								<p class="price">
+									<span class="orig">
+										$1590
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											1190
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34667119">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/545918eb-4b18-4420-8537-3a9f4a3c8e96.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">日本製。智慧感應 時尚手感</div>
+								<h3 class="title">【Panasonic 國際牌】3刀頭 水洗滑順電動刮鬍刀/白 ES-ST2Q-W</h3>
+								<p class="price">
+									<span class="orig">
+										$3988
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											3680
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=32880230">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/7a341aa5-465c-4b9a-a71d-f03849e1b982.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">超大口徑設計</div>
+								<h3 class="title">【THERMOS膳魔師】不鏽鋼真空食物燜燒罐0.5L-黑色(JBN-500-BK)</h3>
+								<p class="price">
+									<span class="orig">
+										$1300
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											599
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34641899">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/71e28be2-0b00-4da0-b75d-485e2475eb3a.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">新一代T2省電燈泡</div>
+								<h3 class="title">【飛利浦PHILIPS】Tornado省電燈泡T2 23W白光E27 120V-6入組</h3>
+								<p class="price">
+									<span class="orig">
+										$1014
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											894
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33809216">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/10cfd13e-6654-4647-8391-8f8ee6f3be8e.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">荷蘭實驗室研發</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】飛利浦安心捕蚊燈 15W 電擊式 (E300)</h3>
+								<p class="price">
+									<span class="orig">
+										$1590
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											1190
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34667119">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/545918eb-4b18-4420-8537-3a9f4a3c8e96.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">日本製。智慧感應 時尚手感</div>
+								<h3 class="title">【Panasonic 國際牌】3刀頭 水洗滑順電動刮鬍刀/白 ES-ST2Q-W</h3>
+								<p class="price">
+									<span class="orig">
+										$3988
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											3680
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=32880230">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/7a341aa5-465c-4b9a-a71d-f03849e1b982.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">超大口徑設計</div>
+								<h3 class="title">【THERMOS膳魔師】不鏽鋼真空食物燜燒罐0.5L-黑色(JBN-500-BK)</h3>
+								<p class="price">
+									<span class="orig">
+										$1300
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											599
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34641899">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/71e28be2-0b00-4da0-b75d-485e2475eb3a.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">新一代T2省電燈泡</div>
+								<h3 class="title">【飛利浦PHILIPS】Tornado省電燈泡T2 23W白光E27 120V-6入組</h3>
+								<p class="price">
+									<span class="orig">
+										$1014
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											894
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=33809216">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/10cfd13e-6654-4647-8391-8f8ee6f3be8e.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">荷蘭實驗室研發</div>
+								<h3 class="title">【飛利浦 PHILIPS LIGHTING】飛利浦安心捕蚊燈 15W 電擊式 (E300)</h3>
+								<p class="price">
+									<span class="orig">
+										$1590
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											1190
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+					<div class="item">
+						<a href="http://mall.cheerspoint.com.tw/showroom/cproduct?cpdtnum=34667119">
+							<div class="item__img">
+								<img src="https://tapi.symphox.com.tw/j_service/draft/output/images/1289/545918eb-4b18-4420-8537-3a9f4a3c8e96.jpeg">
+							</div>
+							<div class="item__info">
+                                <div class="brief">日本製。智慧感應 時尚手感</div>
+								<h3 class="title">【Panasonic 國際牌】3刀頭 水洗滑順電動刮鬍刀/白 ES-ST2Q-W</h3>
+								<p class="price">
+									<span class="orig">
+										$3988
+									</span>
+									<span class="sale">
+										$
+										<strong>
+											3680
+										</strong>
+									</span>
+								</p>
+							</div>
+						</a>
+					</div>
+</div>						
+</section>
+            <!--結束 熱銷品牌推薦-->
+
+            </div>            
+            <footer class="footer">
+                <p>
+Hami Point購物由中華電信委託神坊資訊股份有限公司經營。本網全部內容與商品服務(包含開立發票)，皆由神坊資訊負責。建議您使用Chrome或IE9以上版本的瀏覽器，可獲得較佳使用體驗。
+               </p>
+            </footer>
+        </div>
+        <!--結束 主區塊-->
+    </div>
+
+</body>
+</html>
